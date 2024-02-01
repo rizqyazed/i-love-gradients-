@@ -1,22 +1,22 @@
 var d = new Date(); // for now   
-// this will give the current time in ms
 const current = d.getTime();
-console.log(d.getTime());
 // increase the date by 1
 d.setDate(d.getDate() + 1);
-console.log(d.getDate());
 // set hours, mins, seconds to the 0 [as setHours can accepts (hours, mins, seconds, miliseconds), we can pass all the parameters at once]
 d.setHours(0, 0, 0, 0);
 // now currDate holds the time for midnight
 const midnight = d.getTime();
 // create a setTimeout function for the time difference
 const diff = midnight - current;
+
+
 console.log(`Code will be triggered after: ${diff}ms`);
 setInterval(setGradient, diff);   
 
 function setGradient(){   
     localStorage.setItem("c1", randomColor());
     localStorage.setItem("c2", randomColor());
+    console.log(":test")
     // var first = localStorage.getItem("c1");
     // var second = localStorage.getItem("c2");
     $("body").css(
