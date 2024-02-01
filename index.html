@@ -40,10 +40,21 @@
         $(function(){
             if (localStorage.getItem("c1")===null) {
                setGradient();
+               localStorage.setItem('date', d.getDate());
                console.log("GRADIENT")
             } else {
-                showGradient();
-                console.log("NO GRADIENT :()")
+                if (localStorage.getItem("date") ===null) {
+                    localStorage.setItem('date', d.getDate())
+                }
+                console.log(localStorage.getItem("date"))
+                if (d.getDate().toString() === localStorage.getItem('date')) {
+                    showGradient();
+                    console.log("NO GRADIENT :()")
+                } else {
+                    console.log('different date')
+                    setGradient();
+                }
+
             }
         })
     </script>

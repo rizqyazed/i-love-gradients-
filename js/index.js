@@ -1,11 +1,9 @@
 var d = new Date(); // for now  
 
 console.log(d.getHours())
+console.log(d.getDate())
 
-if (d.getHours() === 0) {
-    console.log("CHANGE")
-    setGradient();
-}
+
 
 function setGradient(){   
     localStorage.setItem("c1", randomColor());
