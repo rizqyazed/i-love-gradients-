@@ -8,6 +8,7 @@ console.log(d.getDate())
 function setGradient(){   
     localStorage.setItem("c1", randomColor());
     localStorage.setItem("c2", randomColor());
+    localStorage.setItem('date', d.getDate());
     console.log(":test")
     // var first = localStorage.getItem("c1");
     // var second = localStorage.getItem("c2");
